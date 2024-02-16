@@ -1,7 +1,9 @@
 import { format, isToday, isYesterday, isThisWeek, isThisYear } from 'date-fns'
 import { ru } from 'date-fns/locale'
 
+
 const formatDateTime = (date) => {
+    
     if (isToday(date)) {
         return `Сегодня, в ${format(date, 'HH:mm', { locale: ru })}`
     }
