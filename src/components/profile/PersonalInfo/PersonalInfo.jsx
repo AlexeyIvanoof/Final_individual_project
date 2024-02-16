@@ -108,17 +108,18 @@ export default function PersonalInfo({ data }) {
         />
       </div>
       <div className={`${s.formDiv} ${phone !== data?.phone && s.active}`}>
-        <label htmlFor="phone">Телефон</label>
-
+        <label>
         <Input
           classes="inputPhone"
           id="phone"
           name="phone"
-          type="tel"
+          type="number"
+          min= "0"
           value={phone}
-          placeholder={+79161234567}
+          placeholder={"Введите телефон в формате: +7 (777) 777-77-77 (Россия)"}
           onChange={(e) => setPhone(e.target.value)}
         />
+        </label>
       </div>
       <Button
         classes="btnPersonal"

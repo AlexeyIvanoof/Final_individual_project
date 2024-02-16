@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import s from './Product.module.css'
 import { formatDateTime } from '../../../utils/formatDate'
 
-//Мои товары
+//Мои товары на странице профиля
 export default function ProductItem({ item }) {
   const navigate = useNavigate()
 

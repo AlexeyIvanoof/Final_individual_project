@@ -15,14 +15,13 @@ export const adsSlice = createSlice({
   initialState,
 
   reducers: {
-    //Сортировка обьявлений по дате добавления
     setAdsAll: (state, action) => {
       const { data } = action.payload
-
+      
+    //Сортировка обьявлений по дате добавления
       state.adsAll = [...data].sort((a, b) => {
         const dateA = new Date(a.created_on)
         const dateB = new Date(b.created_on)
-
         return dateB - dateA
       })
     },
